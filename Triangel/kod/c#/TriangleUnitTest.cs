@@ -14,17 +14,13 @@ namespace TriangleUnitTest
         }
 
         [TestMethod]
-        public void testTriangleInvalidNegativeNumbers()
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void MethodTest()
         {
-            Triangle triInval1 = new Triangle(-2.6, -2.9, -1.8);
-            Assert.IsNotNull(triInval1);
-        }
-
-        [TestMethod]
-        public void testTriangleInvalidTriangleInequality()
-        {
-            Triangle triInval2 = new Triangle(2, 3, 6);
-            Assert.IsNotNull(triInval2);
+            // Triangel med negativa värden
+            var triInval1 = new Triangle(-2.6, -2.9, -1.8);
+            // Ogiltig triangel enligt triangelolikheten
+            var triInval2 = new Triangle(2, 3, 6);
         }
 
         [TestMethod]

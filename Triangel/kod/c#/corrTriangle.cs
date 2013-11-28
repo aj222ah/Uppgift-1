@@ -3,9 +3,9 @@ using System.Linq;
 using System.Collections.Generic;
 
 public struct Point { 
-  public int x, y;
+  public double x, y;
   
-  public Point(int a, int b) {
+  public Point(double a, double b) {
     x = a;
     y = b;
   }
